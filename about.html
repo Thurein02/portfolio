@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | About</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./about.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+<nav>
+  <ul class="sidebar">
+    <li onclick="hideSidebar()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#333">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+      </svg>
+    </li>
+    <li class="hov"><a href="#">Home</a></li>
+    <li class="hov"><a href="#">About</a></li>
+    <li class="hov"><a href="#">Projects</a></li>
+    <li class="hov"><a href="#">Contact</a></li>
+  </ul>
+  <ul>
+    <li><a href="#" class="logo">My<span style="color:#3498db">Portfolio</span></a></li>
+    <li class="hideOnMobile hov"><a href="./home.html">Home</a></li>
+    <li class="hideOnMobile hov"><a href="./about.html">About</a></li>
+    <li class="hideOnMobile hov"><a href="./projects.html">Projects</a></li>
+    <li class="hideOnMobile hov"><a href="./contact.html">Contact</a></li>
+    <li onclick="showSidebar()" class="menu-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 1060" width="30px" fill="#333">
+        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+      </svg>
+    </li>
+  </ul>
+</nav>
+
+    <!-- About Section -->
+    <section>
+        <h2 class="section-title">About Me</h2>
+        <hr>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./imgs/fe96f05f-5e7b-4ff9-b822-d4d003d6426e-removebg-preview.png" alt="About Image">
+                </div>
+                <div class="about-text">
+                    <h2>Who am I?</h2>
+                    <p>I'm a passionate web developer creating beautiful and functional website applications. I specialize in front-end development with a focus on user experience and responsive design.</p>
+                    <p>My journey in web development began when I was in college, and I've been hooked ever since. I love solving problems and creating solutions that make people's lives easier.</p>
+                    <p>When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen.</p>
+                </div>
+            </div>
+            <div class="skill-service">
+                <h2>My Skills</h2>
+                <div class="skills">
+                    <div class="skill-item">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/html5-40-1175193.png" alt="HTML" />
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/css3-11-1175239.png" alt="CSS" />
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript" />
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/bootstrap-6-1175203.png" alt="Bootstrap" />
+                        <h3>Bootstrap</h3>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/php-27-226042.png" alt="PHP" />
+                        <h3>PHP</h3>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./imgs/mysql-datascientest.png" alt="MySQL" />
+                        <h3>MySQL</h3>
+                    </div>
+                </div>
+                <h2>My Services</h2>
+                <div class="services">
+                    <div class="service-item">
+                        <img src="./imgs/Front-end-logo-color@2x.png" alt="Front-End Development" />
+                        <h3>Front-End Development</h3>
+                        <p>Building responsive, dynamic, and visually appealing user interfaces.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="./imgs/backend-development-line-gradient-circle-background-icon-vector-removebg-preview.png" alt="Back-End Development" />
+                        <h3>Back-End Development</h3>
+                        <p>Creating secure and scalable server-side solutions with PHP and MySQL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">My<span>Portfolio</span></a>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <p class="copyright">&copy; 2025 My Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+  function showSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+  }
+
+  function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';
+  }
+
+  // Auto close sidebar on link click
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', hideSidebar);
+  });
+</script>
+</body>
+</html>

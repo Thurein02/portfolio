@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Circular Image</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .circle-container {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #3498db;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            right: -250px; /* Start position outside the screen */
+            animation: slideIn 2s ease-in-out forwards;
+        }
+
+        .circle-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideIn {
+            from {
+                right: -250px;
+            }
+            to {
+                right: 30%;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle-container">
+        <img src="./imgs/fe96f05f-5e7b-4ff9-b822-d4d003d6426e-removebg-preview.png" alt="Circular Image">
+    </div>
+</body>
+</html>
